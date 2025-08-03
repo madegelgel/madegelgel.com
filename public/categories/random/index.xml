@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Random on My New Hugo Site</title>
-    <link>http://localhost:62334/categories/random/</link>
+    <link>http://localhost:1313/categories/random/</link>
     <description>Recent content in Random on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Apr 2020 11:00:00 -0700</lastBuildDate>
-    <atom:link href="http://localhost:62334/categories/random/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/random/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pindah Rumah</title>
-      <link>http://localhost:62334/blog/pindah-rumah-baru/</link>
+      <link>http://localhost:1313/pindah-rumah/</link>
       <pubDate>Fri, 10 Apr 2020 11:00:00 -0700</pubDate>
-      <guid>http://localhost:62334/blog/pindah-rumah-baru/</guid>
-      <description>&lt;p&gt;Akhirnya, setelah sekian lama berdiskusi dengan diri sendiri saya putuskan untuk memindahkan isi domain ini ke rumah baru.&lt;/p&gt;&#xA;&lt;p&gt;Bukan tanpa tujuan, meskipun sama-sama menggunakan layanan gratis, saya menggunakan platform baru karena menilai di sini lebih dinamis. Ya meskipun ini sebuah halaman statis namun karena memiliki kelebihan di mana saya lebih leluasa untuk utak-atik script dibandingkan platform sebelumnya membuat saya memilih untuk pindah rumah.&lt;/p&gt;&#xA;&lt;p&gt;Oke cukup sampai di sini, selamat menikmati sajian yang tersedia.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/pindah-rumah/</guid>
+      <description>&lt;p&gt;Akhirnya, setelah sekian lama berdiskusi dengan diri sendiri saya putuskan untuk memindahkan isi domain ini ke rumah baru&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;Bukan tanpa tujuan, meskipun sama-sama menggunakan layanan gratis, saya menggunakan platform baru karena menilai di sini lebih dinamis. Ya meskipun ini sebuah halaman statis namun karena memiliki kelebihan di mana saya lebih leluasa untuk utak-atik script dibandingkan platform sebelumnya membuat saya memilih untuk pindah rumah.&lt;/p&gt;&#xA;&lt;p&gt;Oke cukup sampai di sini, selamat menikmati sajian yang tersedia.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
