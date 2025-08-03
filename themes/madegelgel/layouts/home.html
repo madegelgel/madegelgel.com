@@ -1,0 +1,56 @@
+{{ define "main" }}
+<section class="hero min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 text-gray-800">
+  <div class="text-center max-w-3xl px-4">
+    <h1 class="text-6xl md:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+      {{ .Site.Title }}
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-600 mb-10 animate-fade-in-up animation-delay-200">
+      {{ .Site.Params.description | default "Crafting elegant solutions with a minimalist approach." }}
+    </p>
+    <a href="#my-work" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 animate-fade-in-up animation-delay-400">
+      View My Work
+    </a>
+  </div>
+</section>
+
+<section id="my-work" class="py-10 bg-white text-gray-800">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">My Work</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {{ range where .Site.RegularPages "Section" "blog" }}
+        <a href="{{ .RelPermalink }}" class="block bg-gray-50 rounded-xl shadow-md hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300 overflow-hidden group">
+          {{ if .Params.image }}
+            {{ $imageParam := .Params.image }}
+            {{ $imageResource := .Resources.GetMatch $imageParam }}
+            {{ if $imageResource }}
+              <img src="{{ $imageResource.RelPermalink }}" alt="{{ .Title }}" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+            {{ else }}
+              <img src="{{ $imageParam | relURL }}" alt="{{ .Title }}" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+            {{ end }}
+          {{ end }}
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">{{ .Title }}</h3>
+            <p class="text-gray-600 text-base leading-relaxed">{{ .Summary | truncate 150 }}</p>
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-gray-100 text-gray-800">
+  <div class="container mx-auto px-4 text-center max-w-3xl">
+    <h2 class="text-4xl font-bold mb-8">About Me</h2>
+    {{ with .Site.GetPage "/about" }}
+      <div class="prose mx-auto text-gray-700 text-lg leading-relaxed mb-8">
+        {{ .Content }}
+      </div>
+      <a href="{{ .RelPermalink }}" class="inline-block bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+        Learn More About Me
+      </a>
+    {{ else }}
+      <p class="text-gray-600 text-lg">Create an 'about.md' page in your content directory to tell visitors about yourself.</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,13 @@
+[
+  {{- with $.Site.GetPage "/blog" }}
+    {{- range $index, $data := .Pages }}
+    {{- if $index }},{{ end }}
+    {
+      "title": "{{ .Title  }}",
+      {{ $sum := .Summary | plainify }}
+      "summary": "{{ replace $sum "\n" "" }}",
+      "url": "{{ .RelPermalink }}"
+    }
+    {{- end }}
+  {{- end }}
+]

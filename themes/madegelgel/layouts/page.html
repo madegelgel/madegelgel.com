@@ -1,0 +1,8 @@
+{{ define "main" }}
+  <article class="bg-white p-8 rounded-lg shadow-md">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">{{ .Title }}</h1>
+    <div class="prose max-w-none text-gray-700 leading-relaxed space-y-4">
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}
