@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <article class="prose lg:prose-xl mx-auto">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">{{ .Title }}</h1>
+    <p class="text-sm text-gray-600 mb-4">
+      Diterbitkan pada 
+      {{ $month := .PublishDate.Format "January" }}
+      {{ $month_id := "" }}
+      {{ if eq $month "January" }}{{ $month_id = "Januari" }}{{ end }}
+      {{ if eq $month "February" }}{{ $month_id = "Februari" }}{{ end }}
+      {{ if eq $month "March" }}{{ $month_id = "Maret" }}{{ end }}
+      {{ if eq $month "April" }}{{ $month_id = "April" }}{{ end }}
+      {{ if eq $month "May" }}{{ $month_id = "Mei" }}{{ end }}
+      {{ if eq $month "June" }}{{ $month_id = "Juni" }}{{ end }}
+      {{ if eq $month "July" }}{{ $month_id = "Juli" }}{{ end }}
+      {{ if eq $month "August" }}{{ $month_id = "Agustus" }}{{ end }}
+      {{ if eq $month "September" }}{{ $month_id = "September" }}{{ end }}
+      {{ if eq $month "October" }}{{ $month_id = "Oktober" }}{{ end }}
+      {{ if eq $month "November" }}{{ $month_id = "November" }}{{ end }}
+      {{ if eq $month "December" }}{{ $month_id = "Desember" }}{{ end }}
+      {{ .PublishDate.Format "2" }} {{ $month_id }} {{ .PublishDate.Format "2006" }}
+    </p>
+    <div>
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}
